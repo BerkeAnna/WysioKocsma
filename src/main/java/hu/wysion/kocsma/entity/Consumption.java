@@ -1,16 +1,16 @@
 package hu.wysion.kocsma.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
-@Table(name = "consumption")
+@Table
+@Data
 
 public class Consumption {
     @Id
@@ -23,6 +23,5 @@ public class Consumption {
     @Column
     private int howManyUnit;
     @ManyToOne
-//    @JoinColumn(name = "pubId", nullable = false)
     private Pub pub;
 }
